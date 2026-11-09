@@ -1,0 +1,4 @@
+strategy,contacts,months,monthly_avg_contacts,gross_scenario_benefit_usd,costs_usd,net_scenario_value_usd,mean_risk,mean_ead_usd
+random,2338,4,584.5,76690.35,19873.0,56817.35,0.2206,5559.52
+risk,2341,4,585.2,80431.23,19898.5,60532.73,0.2326,5461.85
+value,2329,4,582.2,80173.94,19796.5,60377.44,0.23,5647.09

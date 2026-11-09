@@ -1,0 +1,87 @@
+{
+  "purpose": "30+ DPD in the next 60 days; probabilities are NOT 90+ DPD/default PD",
+  "data": "100% synthetic; results are NOT client outcomes",
+  "splits": {
+    "train": 34200,
+    "calibration": 7600,
+    "test": 15200,
+    "train_end": "2024-09",
+    "calibration_end": "2024-11",
+    "test_start": "2024-12",
+    "test_end": "2025-03"
+  },
+  "selected_model": "Gradient-boosted AI",
+  "metrics": {
+    "Logistic regression": {
+      "validation": {
+        "roc_auc": 0.8119,
+        "pr_auc": 0.416,
+        "brier": 0.0754,
+        "log_loss": 0.264,
+        "event_rate": 0.1033
+      },
+      "test": {
+        "roc_auc": 0.8038,
+        "pr_auc": 0.393,
+        "brier": 0.0797,
+        "log_loss": 0.2763,
+        "event_rate": 0.1076,
+        "top_10pct_event_capture": 0.3973
+      }
+    },
+    "Gradient-boosted AI": {
+      "validation": {
+        "roc_auc": 0.8098,
+        "pr_auc": 0.4174,
+        "brier": 0.0753,
+        "log_loss": 0.2643,
+        "event_rate": 0.1033
+      },
+      "test": {
+        "roc_auc": 0.7997,
+        "pr_auc": 0.3889,
+        "brier": 0.08,
+        "log_loss": 0.2778,
+        "event_rate": 0.1076,
+        "top_10pct_event_capture": 0.3906
+      }
+    },
+    "Rule-based flags": {
+      "test": {
+        "roc_auc": 0.7561,
+        "pr_auc": 0.3055,
+        "brier": 0.0839,
+        "log_loss": 0.2937,
+        "event_rate": 0.1076,
+        "top_10pct_event_capture": 0.3606
+      }
+    }
+  },
+  "assumptions": {
+    "transition_to_loss": 0.25,
+    "lgd": 0.7,
+    "relative_risk_reduction_if_contacted": 0.16,
+    "contact_cost_usd": 7.0,
+    "customer_friction_cost_usd": 1.5,
+    "portfolio_monthly_contact_capacity": 650,
+    "eligibility_min_p30": 0.04
+  },
+  "test_population": {
+    "snapshots": 15200,
+    "monthly_unique_accounts": 3800,
+    "months": 4,
+    "observed_30dpd_rate": 0.10763157894736843,
+    "mean_predicted_p30": 0.10097262000709305
+  },
+  "hypothetical_strategy_value": {
+    "random": 56817.35,
+    "risk": 60532.73,
+    "value": 60377.44
+  },
+  "notes": [
+    "Outcomes and action effects are generated/assumed, not measured in a randomized trial.",
+    "Do not equate 30+DPD risk with regulatory PD or assert actual ECL savings.",
+    "No autonomous credit-limit, pricing, or adverse credit decisions.",
+    "Temporal split; same synthetic accounts recur in distinct monthly snapshots and portfolio costs are per account-month, not lifetime unique customers."
+  ]
+}
