@@ -136,5 +136,3 @@ with t4:
     st.download_button('Download scenario comparison CSV',polsum.to_csv(index=False),'riskpulse_strategy_scenario.csv','text/csv')
     st.markdown('#### Reference documents')
     st.markdown('- [UK PRA Model Risk Management Statement](https://www.bankofengland.co.uk/prudential-regulation/publication/2023/may/model-risk-management-principles-for-banks-ss)\n- [NIST AI Risk Management Framework Playbook](https://airc.nist.gov/airmf-resources/playbook/)\n- [scikit-learn Probability Calibration](https://scikit-learn.org/stable/modules/calibration.html)')
-
-st.caption('© Independent educational Case Study • 100% synthetic data • No banking customer records • Not investment, lending, or credit advice.')
