@@ -1,1 +1,1 @@
-"""RiskPulse AI – synthetic consumer-credit early warning portfolio."""
+"""Credtr.ai – synthetic consumer-credit early warning portfolio."""

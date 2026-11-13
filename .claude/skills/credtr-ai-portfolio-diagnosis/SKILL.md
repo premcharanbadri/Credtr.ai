@@ -1,15 +1,15 @@
 ---
-name: riskpulse-portfolio-diagnosis
-description: Analyze uploaded synthetic RiskPulse account-month CSV data with reproducible Python checks for monthly delinquency, cohorts, duplicate keys, and denominators.
+name: credtr-ai-portfolio-diagnosis
+description: Analyze uploaded synthetic Credtr.ai account-month CSV data with reproducible Python checks for monthly delinquency, cohorts, duplicate keys, and denominators.
 ---
-# RiskPulse portfolio diagnosis
+# Credtr.ai portfolio diagnosis
 
-Use this skill when the user asks for portfolio events, trends, cohort comparisons, data integrity, or risk-factor associations in the **synthetic RiskPulse dataset**.
+Use this skill when the user asks for portfolio events, trends, cohort comparisons, data integrity, or risk-factor associations in the **synthetic Credtr.ai dataset**.
 
 ## Required evidence
 - Data: `data/synthetic_account_months.csv` in this repository (regenerate with `python -m src.pipeline`), or a copy the user attaches. If neither is available, ask for it.
 - Run this skill's script with Python 3 (standard library only), from the repository root:
-  `python .claude/skills/riskpulse-portfolio-diagnosis/scripts/verify.py --data data/synthetic_account_months.csv`
+  `python .claude/skills/credtr-ai-portfolio-diagnosis/scripts/verify.py --data data/synthetic_account_months.csv`
 - Do not guess paths; list the actual files first. If the script cannot run, reproduce its algorithm directly and say so. Never invent execution.
 
 ## Calculation conventions

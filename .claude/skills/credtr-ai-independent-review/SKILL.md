@@ -1,8 +1,8 @@
 ---
-name: riskpulse-independent-review
-description: Critically review RiskPulse synthetic credit-analytics reports for misleading accuracy claims, leakage, missing evidence, denominator mistakes, and unsupported savings claims.
+name: credtr-ai-independent-review
+description: Critically review Credtr.ai synthetic credit-analytics reports for misleading accuracy claims, leakage, missing evidence, denominator mistakes, and unsupported savings claims.
 ---
-# Independent review of RiskPulse analytical answers
+# Independent review of Credtr.ai analytical answers
 
 Use when the user requests a second-pass review, challenge, audit, or critique of portfolio analysis, risk-model metrics, outreach strategy, financial scenarios, or executive recommendations.
 

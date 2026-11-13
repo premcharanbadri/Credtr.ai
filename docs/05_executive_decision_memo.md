@@ -1,4 +1,4 @@
-# Executive decision memo | RiskPulse AI
+# Executive decision memo | Credtr.ai
 
 **Prepared for:** Head of Credit Risk Strategy / Product & Customer Operations  
 **Decision requested:** Approve governed shadow evaluation and design an ethical supportive-outreach experiment. **Do not approve automated portfolio actions or claim savings.**

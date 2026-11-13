@@ -1,4 +1,4 @@
-# RiskPulse AI | Strategy brief and architecture
+# Credtr.ai | Strategy brief and architecture
 
 ## Executive problem
 Portfolio risk leaders often respond to delinquency after missed-payment statuses show up in reports. They need an early-warning approach using behavior as of **today**, with traceable analytics and bounded operational workload.

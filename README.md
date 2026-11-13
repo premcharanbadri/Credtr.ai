@@ -1,4 +1,4 @@
-# RiskPulse : Credit Risk Analytics Copilot
+# Credtr.ai : Credit Risk Analytics Copilot
 
 #### Live Demo: https://riskpulseaiapp.streamlit.app/
 
@@ -21,7 +21,7 @@ Synthetic as-of snapshots -> immutable time partitions -> SQL cohort/root cause 
 The advanced gradient-boosted challenger was selected on validation PR AUC (0.4174 vs logistic regression's 0.4160), but on the untouched future test logistic regression had slightly better ROC AUC, PR AUC, Brier, and top-decile capture. That is a **stop/challenge signal**, not a reason to retrain on the final test. A 2-month contact cooldown also causes a greedy value-first policy to underperform risk-first *slightly* over four months ($60.4K vs $60.5K in hypothetical net value).
 
 ## Verified results (Dec 2024 to Mar 2025 holdout, 15,200 account-months)
-These were reproduced independently by re-running `src/pipeline.py` and reconciling to `RiskPulse_Financial_Model.xlsx`. All dollar values are **modeled scenario values on synthetic data**, not realized savings.
+These were reproduced independently by re-running `src/pipeline.py` and reconciling to `Credtr.ai_Financial_Model.xlsx`. All dollar values are **modeled scenario values on synthetic data**, not realized savings.
 
 | Result | Value | Source |
 | --- | --- | --- |
@@ -39,9 +39,9 @@ The $155 risk-first advantage comes from the 2-month cooldown. With no cooldown,
 
 ## Claude skills
 `.claude/skills/` contains two skills that Claude Code loads automatically in this repository:
-- `riskpulse-portfolio-diagnosis`: monthly, cohort and behavioral event rates plus data-integrity checks. Uses the standard-library script `scripts/verify.py`:
-  `python .claude/skills/riskpulse-portfolio-diagnosis/scripts/verify.py --data data/synthetic_account_months.csv`
-- `riskpulse-independent-review`: a second-pass review checklist that rejects AUC-as-accuracy, target leakage, unsupported savings claims and automated adverse credit actions, and ends in a PASS / PASS WITH QUALIFICATIONS / FAIL verdict.
+- `credtr-ai-portfolio-diagnosis`: monthly, cohort and behavioral event rates plus data-integrity checks. Uses the standard-library script `scripts/verify.py`:
+  `python .claude/skills/credtr-ai-portfolio-diagnosis/scripts/verify.py --data data/synthetic_account_months.csv`
+- `credtr-ai-independent-review`: a second-pass review checklist that rejects AUC-as-accuracy, target leakage, unsupported savings claims and automated adverse credit actions, and ends in a PASS / PASS WITH QUALIFICATIONS / FAIL verdict.
 
 ## Project files
 - `src/pipeline.py`: generation, feature processing, model evaluation, scenario policy.
@@ -52,7 +52,7 @@ The $155 risk-first advantage comes from the 2-month cooldown. With no cooldown,
 - `docs/`: business case, governance, data dictionary, experiments and reproducibility.
 - `.claude/skills/`: Claude skills for portfolio diagnosis and independent review.
 - `tests/`: basic unit tests. Tests do **not** establish production model fitness.
-- `RiskPulse_Financial_Model.xlsx`: editable scenario assumptions and Excel calculations.
+- `Credtr.ai_Financial_Model.xlsx`: editable scenario assumptions and Excel calculations.
 
 ## Critical analytical limits
 1. Outcome `dpd30_next_60d` is a 30+ DPD prediction, **not probability of default** (90+ DPD/chargeoff) and not IFRS 9 or CECL ECL.

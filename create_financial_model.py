@@ -35,7 +35,7 @@ def title(sh,txt,last='F'):
 def header(sh,range_):
     sh.get_range(range_).format={'fill':NAVY,'font':{'bold':True,'color':WHITE},'row_height':24}
 
-title(inputs,'RISK PULSE | Scenario assumptions','D')
+title(inputs,'CREDTR.AI | Scenario assumptions','D')
 inputs.get_range('A4:C4').values=[['Input / parameter','Editable assumption','Rationale / source']]
 header(inputs,'A4:C4')
 assumptions=[
@@ -105,7 +105,7 @@ sens.get_range('B5:D9').conditional_formats.add_cell_is({'operator':'lessThan','
 
 # executive dashboard with formula links
 
-title(summary,'RISK PULSE AI | Credit strategy decision case','F')
+title(summary,'CREDTR.AI | Credit strategy decision case','F')
 summary.get_range('A4:B4').values=[['Headline KPI','Illustrative value']]
 header(summary,'A4:B4')
 rows=[('Test-set account-month snapshots',15200),('Distinct accounts per month',3800),('Months tested',4),('AI ROC AUC',0.7997),('PR AUC',0.3889),('Top-10% event capture',0.3906),('Observed event rate',0.1076)]
@@ -153,7 +153,7 @@ sources.get_range('D:D').format.column_width=86
 sources.get_range(f'A5:D{4+len(notes)}').format.wrap_text=True
 
 # Export and check
-path=ROOT/'RiskPulse_Financial_Model.xlsx'
+path=ROOT/'Credtr.ai_Financial_Model.xlsx'
 print(w.inspect({'kind':'table','range':'Strategy Economics!A4:G7','include':'values,formulas','table_max_rows':8,'table_max_cols':8}).ndjson[:3500])
 print(w.inspect({'kind':'match','search_term':'#REF!|#DIV/0!|#VALUE!|#NAME\\?|#N/A','options':{'use_regex':True,'max_results':30},'summary':'finance validation'}).ndjson[:1000])
 SpreadsheetFile.export_xlsx(w).save(str(path))
