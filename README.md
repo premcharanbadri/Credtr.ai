@@ -1,4 +1,4 @@
-# RiskPulseAI : Explainable Credit Early-Warning & Portfolio Strategy
+# RiskPulse : Credit Risk Analytics Copilot
 
 #### Live Demo: https://riskpulseaiapp.streamlit.app/
 
