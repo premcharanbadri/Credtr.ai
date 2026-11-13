@@ -1,6 +1,6 @@
 numpy>=2.0,<3
 pandas>=2.1,<3
 scipy>=1.12,<2
-scikit-learn>=1.5,<2
+scikit-learn>=1.5,<1.9  # 1.9+ changes boosting results; <=1.8 reproduces the published metrics exactly
 plotly>=5.20,<7
 streamlit>=1.38,<2
