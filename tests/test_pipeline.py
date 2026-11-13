@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 from src.pipeline import synthetic_snapshots,split_data,add_economics,policy_selection,ASSUMPTIONS,FEATURES
 
-class TestRiskPulse(unittest.TestCase):
+class TestCredtrAI(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.d=synthetic_snapshots(200,seed=42)

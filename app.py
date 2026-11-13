@@ -1,4 +1,4 @@
-"""RiskPulse AI: pure synthetic-data portfolio dashboard; no live banking decisions."""
+"""Credtr.ai: pure synthetic-data portfolio dashboard; no live banking decisions."""
 from pathlib import Path
 import json
 import numpy as np
@@ -8,7 +8,7 @@ import plotly.graph_objects as go
 import streamlit as st
 
 ROOT=Path(__file__).resolve().parent
-st.set_page_config(page_title="RiskPulse AI | Credit Portfolio Decisions",page_icon="📊",layout="wide")
+st.set_page_config(page_title="Credtr.ai | Credit Portfolio Decisions",page_icon="📊",layout="wide")
 
 @st.cache_data
 
@@ -19,7 +19,7 @@ def load():
     return dat
 D=load();s=D['summary'];d=D['out_of_time_predictions']
 
-st.title("RiskPulse AI")
+st.title("Credtr.ai")
 st.caption("Explainable early warning • Operationally constrained supportive outreach • Financial decision analytics")
 st.warning("Note: Modeled loss reductions are assumptions, not observed effects. This is not an automated lending-decision platform.")
 
@@ -133,6 +133,6 @@ with t4:
 **Hard guardrails:** No credit-limit cuts, APR changes, underwriting, adverse actions, or automated discriminatory targeting. Future real-data use requires authorizations and independent model-risk validation.
 ''')
     st.markdown('#### Export the scenario strategy comparison')
-    st.download_button('Download scenario comparison CSV',polsum.to_csv(index=False),'riskpulse_strategy_scenario.csv','text/csv')
+    st.download_button('Download scenario comparison CSV',polsum.to_csv(index=False),'credtr_ai_strategy_scenario.csv','text/csv')
     st.markdown('#### Reference documents')
     st.markdown('- [UK PRA Model Risk Management Statement](https://www.bankofengland.co.uk/prudential-regulation/publication/2023/may/model-risk-management-principles-for-banks-ss)\n- [NIST AI Risk Management Framework Playbook](https://airc.nist.gov/airmf-resources/playbook/)\n- [scikit-learn Probability Calibration](https://scikit-learn.org/stable/modules/calibration.html)')

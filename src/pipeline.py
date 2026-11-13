@@ -1,4 +1,4 @@
-"""RiskPulse AI | deterministic synthetic data, honest temporal evaluation, decision economics.
+"""Credtr.ai | deterministic synthetic data, honest temporal evaluation, decision economics.
 
 IMPORTANT: No real persons or client data; no causal treatment effect measured.
 Synthetic target: 30+ days past due during next 60 days, NOT regulatory default PD.

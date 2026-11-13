@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""RiskPulse synthetic portfolio diagnostic; stdlib only, no API, no remote data."""
+"""Credtr.ai synthetic portfolio diagnostic; stdlib only, no API, no remote data."""
 from __future__ import annotations
 import argparse
 import csv
